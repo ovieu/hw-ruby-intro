@@ -44,8 +44,10 @@ class BookInStock
 # YOUR CODE HERE
 	attr_accessor :isbn
 	attr_accessor :price
-	
+
 	def initialize(isbn, price)
+		raise ArgumentError.new("isbn is empty") if isbn.empty?
+		raise ArgumentError.new("price is less than or eq to zero")
 		@isbn, @price = isbn, price
 	end
 end
