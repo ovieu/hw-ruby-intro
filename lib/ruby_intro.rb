@@ -42,4 +42,10 @@ end
 
 class BookInStock
 # YOUR CODE HERE
+	attr_accessor :isbn
+	attr_accessor :price
+	
+	def initialize(isbn, price)
+		@isbn, @price = isbn, price
+	end
 end
