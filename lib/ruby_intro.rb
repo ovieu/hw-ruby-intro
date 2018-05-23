@@ -4,13 +4,13 @@
 
 def sum arr
   # YOUR CODE HERE
-  return 0 if arr.length == 0
+  return 0 if arr.empty?
   arr.inject(0, :+)
 end
 
 def max_2_sum arr
   # YOUR CODE HERE
-  return 0 if arr.length == 0
+  return 0 if arr.empty?
   return arr[0] if arr.length == 1
   # => inject returns the sum of the array
   arr.sort.last(2).inject(0, :+)
