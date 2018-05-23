@@ -34,6 +34,8 @@ end
 
 def binary_multiple_of_4? s
   # YOUR CODE HERE
+  return false if  s.empty? || s =~ /[^10]/i 
+  s.to_i(2) % 4 == 0 ? true : false
 end
 
 # Part 3
