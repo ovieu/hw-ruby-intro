@@ -4,6 +4,8 @@
 
 def sum arr
   # YOUR CODE HERE
+  return 0 if arr.length == 0
+  arr.inject(0, :+)
 end
 
 def max_2_sum arr
