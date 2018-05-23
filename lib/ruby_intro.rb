@@ -10,6 +10,10 @@ end
 
 def max_2_sum arr
   # YOUR CODE HERE
+  return 0 if arr.length == 0
+  return arr[0] if arr.length == 1
+  # => inject returns the sum of the array
+  arr.sort.last(2).inject(0, :+)
 end
 
 def sum_to_n? arr, n
