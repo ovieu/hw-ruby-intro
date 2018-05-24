@@ -47,7 +47,13 @@ class BookInStock
 
 	def initialize(isbn, price)
 		raise ArgumentError.new("isbn is empty") if isbn.empty?
-		raise ArgumentError.new("price is less than or eq to zero")
+		raise ArgumentError.new("price is less than or eq to zero") if price <= 0
 		@isbn, @price = isbn, price
+	end
+
+	def price_as_string
+		return "$#{@price}.00" if @price.is_a? Integer
+		return "$#{@price}" if @price.to_s =~ /\d*.[0-9][0-9]/
+		return "$#{@price}0" if @price.to_s =~ /\d*.[0-9]/
 	end
 end
